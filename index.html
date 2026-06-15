@@ -19,7 +19,7 @@
       type="checkbox"
       id="cart-playera"
       name="prendas"
-      value="Playera Essential - $349 MXN"
+      value="Blusa Essential - $349 MXN"
       form="orderForm"
     >
     <input
@@ -62,6 +62,93 @@
       value="Tenis Ruta - $829 MXN"
       form="orderForm"
     >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-blusa-lino"
+      name="prendas"
+      value="Blusa Lino - $429 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-blusa-oliva"
+      name="prendas"
+      value="Blusa Oliva - $459 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-jeans-wide"
+      name="prendas"
+      value="Jeans Wide Leg - $729 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-falda-denim"
+      name="prendas"
+      value="Falda Denim - $649 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-abrigo-puffer"
+      name="prendas"
+      value="Puffer Urbano - $1099 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-vestido-midi"
+      name="prendas"
+      value="Vestido Midi - $799 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-vestido-noche"
+      name="prendas"
+      value="Vestido Noche - $949 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-bolso-mini"
+      name="prendas"
+      value="Bolso Mini - $699 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-gafas-sol"
+      name="prendas"
+      value="Gafas Sol - $299 MXN"
+      form="orderForm"
+    >
+    <input class="state-control order-state" type="checkbox" id="order-playera" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-chamarra" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-jeans" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-vestido" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-sudadera" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-tenis" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-blusa-lino" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-blusa-oliva" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-jeans-wide" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-falda-denim" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-abrigo-puffer" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-vestido-midi" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-vestido-noche" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-bolso-mini" aria-hidden="true" form="orderForm">
+    <input class="state-control order-state" type="checkbox" id="order-gafas-sol" aria-hidden="true" form="orderForm">
     <header class="site-header">
       <nav class="nav" aria-label="Navegación principal">
         <a class="brand" href="#inicio" aria-label="Ir al inicio de Brisa Urbana">
@@ -126,7 +213,7 @@
 
         <div class="filters" aria-label="Filtrar productos por categoría">
           <label class="filter-button" for="filter-todo">Todo</label>
-          <label class="filter-button" for="filter-tops">Tops</label>
+          <label class="filter-button" for="filter-tops">Blusas</label>
           <label class="filter-button" for="filter-denim">Denim</label>
           <label class="filter-button" for="filter-exterior">Exterior</label>
           <label class="filter-button" for="filter-vestidos">Vestidos</label>
@@ -137,13 +224,13 @@
           <article class="product-card product-card-playera" data-category="tops">
             <figure>
               <img
-                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80"
-                alt="Playera básica blanca colgada en un fondo claro"
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+                alt="Mujer usando una blusa negra de manga ligera"
               >
             </figure>
             <div class="product-info">
-              <p class="product-meta">Tops</p>
-              <h3>Playera Essential</h3>
+              <p class="product-meta">Blusas</p>
+              <h3>Blusa Essential</h3>
               <p>Algodón suave, corte relajado y cuello redondo para combinar con todo.</p>
               <ul class="size-list" aria-label="Tallas disponibles">
                 <li>XS</li>
@@ -151,8 +238,30 @@
                 <li>M</li>
                 <li>L</li>
               </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="blusa-essential-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="blusa-essential-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Blanco</option>
+                    <option>Negro</option>
+                    <option>Verde</option>
+                  </select>
+                </label>
+              </div>
               <div class="product-footer">
                 <strong>$349 MXN</strong>
+                <label class="order-button" for="order-playera">Ordenar</label>
                 <label class="add-to-cart" for="cart-playera">
                   <span class="add-label-text">Agregar</span>
                   <span class="added-label-text">Agregado</span>
@@ -179,8 +288,30 @@
                 <li>L</li>
                 <li>XL</li>
               </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="chamarra-weekend-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="chamarra-weekend-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Negro</option>
+                    <option>Azul marino</option>
+                    <option>Oliva</option>
+                  </select>
+                </label>
+              </div>
               <div class="product-footer">
                 <strong>$899 MXN</strong>
+                <label class="order-button" for="order-chamarra">Ordenar</label>
                 <label class="add-to-cart" for="cart-chamarra">
                   <span class="add-label-text">Agregar</span>
                   <span class="added-label-text">Agregado</span>
@@ -207,8 +338,30 @@
                 <li>30</li>
                 <li>32</li>
               </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="jeans-mom-fit-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>26</option>
+                    <option>28</option>
+                    <option>30</option>
+                    <option>32</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="jeans-mom-fit-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Azul claro</option>
+                    <option>Azul medio</option>
+                    <option>Negro</option>
+                  </select>
+                </label>
+              </div>
               <div class="product-footer">
                 <strong>$699 MXN</strong>
+                <label class="order-button" for="order-jeans">Ordenar</label>
                 <label class="add-to-cart" for="cart-jeans">
                   <span class="add-label-text">Agregar</span>
                   <span class="added-label-text">Agregado</span>
@@ -235,8 +388,30 @@
                 <li>M</li>
                 <li>L</li>
               </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="vestido-sol-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="vestido-sol-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Blanco</option>
+                    <option>Coral</option>
+                    <option>Mostaza</option>
+                  </select>
+                </label>
+              </div>
               <div class="product-footer">
                 <strong>$749 MXN</strong>
+                <label class="order-button" for="order-vestido">Ordenar</label>
                 <label class="add-to-cart" for="cart-vestido">
                   <span class="add-label-text">Agregar</span>
                   <span class="added-label-text">Agregado</span>
@@ -263,8 +438,31 @@
                 <li>L</li>
                 <li>XL</li>
               </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="sudadera-nube-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="sudadera-nube-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Gris</option>
+                    <option>Beige</option>
+                    <option>Verde</option>
+                  </select>
+                </label>
+              </div>
+              <p class="discount-note">Promo en color Verde: -$35 MXN</p>
               <div class="product-footer">
                 <strong>$579 MXN</strong>
+                <label class="order-button" for="order-sudadera">Ordenar</label>
                 <label class="add-to-cart" for="cart-sudadera">
                   <span class="add-label-text">Agregar</span>
                   <span class="added-label-text">Agregado</span>
@@ -291,9 +489,480 @@
                 <li>25</li>
                 <li>26</li>
               </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="tenis-ruta-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="tenis-ruta-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Naranja</option>
+                    <option>Blanco</option>
+                    <option>Azul</option>
+                  </select>
+                </label>
+              </div>
+              <p class="discount-note">Promo en talla 26: -$50 MXN</p>
               <div class="product-footer">
                 <strong>$829 MXN</strong>
+                <label class="order-button" for="order-tenis">Ordenar</label>
                 <label class="add-to-cart" for="cart-tenis">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-blusa-lino" data-category="tops">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80"
+                alt="Blusas claras colgadas en una boutique"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Blusas</p>
+              <h3>Blusa Lino</h3>
+              <p>Textura fresca, detalle delicado al frente y caída ligera para clima cálido.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>XS</li>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+              </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="blusa-lino-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="blusa-lino-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Blanco</option>
+                    <option>Beige</option>
+                    <option>Rosa claro</option>
+                  </select>
+                </label>
+              </div>
+              <p class="discount-note">Promo de prenda: -$40 MXN</p>
+              <div class="product-footer">
+                <strong>$429 MXN</strong>
+                <label class="order-button" for="order-blusa-lino">Ordenar</label>
+                <label class="add-to-cart" for="cart-blusa-lino">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-blusa-oliva" data-category="tops">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80"
+                alt="Mujer usando una blusa clara de estilo casual"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Blusas</p>
+              <h3>Blusa Oliva</h3>
+              <p>Manga amplia, corte cómodo y acabado suave para looks casuales.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+              </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="blusa-oliva-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="blusa-oliva-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Oliva</option>
+                    <option>Crema</option>
+                    <option>Negro</option>
+                  </select>
+                </label>
+              </div>
+              <div class="product-footer">
+                <strong>$459 MXN</strong>
+                <label class="order-button" for="order-blusa-oliva">Ordenar</label>
+                <label class="add-to-cart" for="cart-blusa-oliva">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-jeans-wide" data-category="denim">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=80"
+                alt="Jeans azules de corte amplio en un outfit casual"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Denim</p>
+              <h3>Jeans Wide Leg</h3>
+              <p>Pierna amplia, tiro alto y mezclilla suave para movimiento diario.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>26</li>
+                <li>28</li>
+                <li>30</li>
+                <li>32</li>
+              </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="jeans-wide-leg-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>26</option>
+                    <option>28</option>
+                    <option>30</option>
+                    <option>32</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="jeans-wide-leg-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Azul claro</option>
+                    <option>Azul oscuro</option>
+                    <option>Negro</option>
+                  </select>
+                </label>
+              </div>
+              <p class="discount-note">Promo en color Negro: -$40 MXN</p>
+              <div class="product-footer">
+                <strong>$729 MXN</strong>
+                <label class="order-button" for="order-jeans-wide">Ordenar</label>
+                <label class="add-to-cart" for="cart-jeans-wide">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-falda-denim" data-category="denim">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+                alt="Outfit con prenda denim y estilo urbano"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Denim</p>
+              <h3>Falda Denim</h3>
+              <p>Corte recto, acabado azul medio y largo cómodo para combinar con blusas.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>XS</li>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+              </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="falda-denim-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="falda-denim-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Azul medio</option>
+                    <option>Azul oscuro</option>
+                    <option>Negro</option>
+                  </select>
+                </label>
+              </div>
+              <p class="discount-note">Promo de prenda: -$50 MXN</p>
+              <div class="product-footer">
+                <strong>$649 MXN</strong>
+                <label class="order-button" for="order-falda-denim">Ordenar</label>
+                <label class="add-to-cart" for="cart-falda-denim">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-abrigo-puffer" data-category="exterior">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=900&q=80"
+                alt="Chamarra puffer para clima fresco"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Exterior</p>
+              <h3>Puffer Urbano</h3>
+              <p>Acolchado ligero, cuello alto y ajuste práctico para días fríos.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+              </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="puffer-urbano-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="puffer-urbano-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Negro</option>
+                    <option>Beige</option>
+                    <option>Verde</option>
+                  </select>
+                </label>
+              </div>
+              <p class="discount-note">Promo en talla XL: -$60 MXN</p>
+              <div class="product-footer">
+                <strong>$1099 MXN</strong>
+                <label class="order-button" for="order-abrigo-puffer">Ordenar</label>
+                <label class="add-to-cart" for="cart-abrigo-puffer">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-vestido-midi" data-category="vestidos">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=900&q=80"
+                alt="Vestido midi de estilo femenino"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Vestidos</p>
+              <h3>Vestido Midi</h3>
+              <p>Largo medio, ajuste relajado y silueta versátil para día o tarde.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>XS</li>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+              </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="vestido-midi-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="vestido-midi-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Verde</option>
+                    <option>Azul</option>
+                    <option>Negro</option>
+                  </select>
+                </label>
+              </div>
+              <div class="product-footer">
+                <strong>$799 MXN</strong>
+                <label class="order-button" for="order-vestido-midi">Ordenar</label>
+                <label class="add-to-cart" for="cart-vestido-midi">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-vestido-noche" data-category="vestidos">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80"
+                alt="Vestido elegante para salida de noche"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Vestidos</p>
+              <h3>Vestido Noche</h3>
+              <p>Caída fluida, detalle elegante y tono fácil de combinar con accesorios.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>XS</li>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+              </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="vestido-noche-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="vestido-noche-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Negro</option>
+                    <option>Vino</option>
+                    <option>Azul marino</option>
+                  </select>
+                </label>
+              </div>
+              <p class="discount-note">Promo en color Vino: -$80 MXN</p>
+              <div class="product-footer">
+                <strong>$949 MXN</strong>
+                <label class="order-button" for="order-vestido-noche">Ordenar</label>
+                <label class="add-to-cart" for="cart-vestido-noche">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-bolso-mini" data-category="accesorios">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80"
+                alt="Bolso pequeño de mano en color neutro"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Accesorios</p>
+              <h3>Bolso Mini</h3>
+              <p>Tamaño compacto, correa cómoda y espacio para lo esencial.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>Única</li>
+                <li>Negro</li>
+                <li>Beige</li>
+              </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="bolso-mini-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>Única</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="bolso-mini-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Negro</option>
+                    <option>Beige</option>
+                    <option>Café</option>
+                  </select>
+                </label>
+              </div>
+              <p class="discount-note">Promo en color Café: -$35 MXN</p>
+              <div class="product-footer">
+                <strong>$699 MXN</strong>
+                <label class="order-button" for="order-bolso-mini">Ordenar</label>
+                <label class="add-to-cart" for="cart-bolso-mini">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-gafas-sol" data-category="accesorios">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=80"
+                alt="Gafas de sol con armazón moderno"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Accesorios</p>
+              <h3>Gafas Sol</h3>
+              <p>Armazón ligero, diseño moderno y protección para looks de día.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>Única</li>
+                <li>Café</li>
+                <li>Negro</li>
+              </ul>
+              <div class="product-choice">
+                <label>
+                  Talla
+                  <select name="gafas-sol-talla" form="orderForm">
+                    <option value="">Elige talla</option>
+                    <option>Única</option>
+                  </select>
+                </label>
+                <label>
+                  Color
+                  <select name="gafas-sol-color" form="orderForm">
+                    <option value="">Elige color</option>
+                    <option>Negro</option>
+                    <option>Café</option>
+                    <option>Carey</option>
+                  </select>
+                </label>
+              </div>
+              <div class="product-footer">
+                <strong>$299 MXN</strong>
+                <label class="order-button" for="order-gafas-sol">Ordenar</label>
+                <label class="add-to-cart" for="cart-gafas-sol">
                   <span class="add-label-text">Agregar</span>
                   <span class="added-label-text">Agregado</span>
                 </label>
@@ -308,7 +977,7 @@
           <p class="eyebrow">Ideas rápidas</p>
           <h2 id="combinaciones-titulo">Arma un outfit en tres pasos</h2>
           <ol class="steps">
-            <li>Elige una prenda base: playera, vestido o sudadera.</li>
+            <li>Elige una prenda base: blusa, vestido o sudadera.</li>
             <li>Agrega una capa: chamarra ligera o denim.</li>
             <li>Cierra con un acento: tenis de color o accesorio neutro.</li>
           </ol>
@@ -422,11 +1091,6 @@
           <p class="eyebrow">Pedido</p>
           <h2 id="pedido-titulo">Solicita tus prendas</h2>
           <p>Completa tus datos y revisa el resumen antes de enviar.</p>
-          <ul class="order-benefits" aria-label="Ventajas del pedido">
-            <li>Respuesta rápida</li>
-            <li>Cambios fáciles</li>
-            <li>Sin pago inmediato</li>
-          </ul>
         </div>
 
         <div class="order-layout">
@@ -437,6 +1101,11 @@
             method="post"
             enctype="text/plain"
           >
+            <input
+              type="hidden"
+              name="promociones-disponibles"
+              value="Blusa Lino -$40; Falda Denim -$50; Sudadera Nube color Verde -$35; Tenis Ruta talla 26 -$50; Jeans Wide Leg color Negro -$40; Puffer Urbano talla XL -$60; Vestido Noche color Vino -$80; Bolso Mini color Café -$35"
+            >
             <div class="form-grid">
               <label class="field-half">
                 Nombre completo
@@ -455,35 +1124,20 @@
                 <input type="text" name="ciudad" autocomplete="address-level2" placeholder="Tu ciudad">
               </label>
               <label class="field-main">
-                Prenda principal
-                <select name="favorita" required>
-                  <option value="">Selecciona una opción</option>
-                  <option>Playera Essential</option>
-                  <option>Chamarra Weekend</option>
-                  <option>Jeans Mom Fit</option>
-                  <option>Vestido Sol</option>
-                  <option>Sudadera Nube</option>
-                  <option>Tenis Ruta</option>
-                </select>
+                Calle y número
+                <input type="text" name="calle" autocomplete="street-address" required placeholder="Calle, número exterior e interior">
               </label>
               <label class="field-small">
-                Cantidad
-                <input type="number" name="cantidad" min="1" max="10" value="1">
+                Colonia
+                <input type="text" name="colonia" required placeholder="Colonia">
               </label>
               <label class="field-small">
-                Talla
-                <select name="talla">
-                  <option>XS</option>
-                  <option>S</option>
-                  <option selected>M</option>
-                  <option>L</option>
-                  <option>XL</option>
-                  <option>Numérica</option>
-                </select>
+                Código postal
+                <input type="text" name="codigo-postal" autocomplete="postal-code" required inputmode="numeric" pattern="[0-9]{5}" placeholder="00000">
               </label>
-              <label class="field-small">
-                Color
-                <input type="color" name="color" value="#0f766e">
+              <label class="field-full">
+                Referencia de entrega
+                <input type="text" name="referencia" placeholder="Entre calles, color de fachada o punto cercano">
               </label>
             </div>
 
@@ -530,8 +1184,8 @@
             </div>
 
             <label class="field-full comments-field">
-              Comentarios
-              <textarea name="comentarios" rows="3" placeholder="Talla numérica, color alternativo o detalles del pedido"></textarea>
+              Notas del pedido
+              <textarea name="comentarios" rows="3" placeholder="Horario preferido, referencia extra o indicaciones para la entrega"></textarea>
             </label>
 
             <div class="form-actions">
@@ -547,34 +1201,170 @@
             </div>
             <ul id="cartItems">
               <li class="summary-item summary-playera">
-                <span>Playera Essential</span>
+                <span class="summary-product">
+                  Blusa Essential
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-playera"></span>
+                    <span class="summary-color summary-color-playera"></span>
+                  </small>
+                </span>
                 <strong>$349 MXN</strong>
               </li>
               <li class="summary-item summary-chamarra">
-                <span>Chamarra Weekend</span>
+                <span class="summary-product">
+                  Chamarra Weekend
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-chamarra"></span>
+                    <span class="summary-color summary-color-chamarra"></span>
+                  </small>
+                </span>
                 <strong>$899 MXN</strong>
               </li>
               <li class="summary-item summary-jeans">
-                <span>Jeans Mom Fit</span>
+                <span class="summary-product">
+                  Jeans Mom Fit
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-jeans"></span>
+                    <span class="summary-color summary-color-jeans"></span>
+                  </small>
+                </span>
                 <strong>$699 MXN</strong>
               </li>
               <li class="summary-item summary-vestido">
-                <span>Vestido Sol</span>
+                <span class="summary-product">
+                  Vestido Sol
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-vestido"></span>
+                    <span class="summary-color summary-color-vestido"></span>
+                  </small>
+                </span>
                 <strong>$749 MXN</strong>
               </li>
               <li class="summary-item summary-sudadera">
-                <span>Sudadera Nube</span>
+                <span class="summary-product">
+                  Sudadera Nube
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-sudadera"></span>
+                    <span class="summary-color summary-color-sudadera"></span>
+                    <span class="summary-discount summary-discount-sudadera"></span>
+                  </small>
+                </span>
                 <strong>$579 MXN</strong>
               </li>
               <li class="summary-item summary-tenis">
-                <span>Tenis Ruta</span>
+                <span class="summary-product">
+                  Tenis Ruta
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-tenis"></span>
+                    <span class="summary-color summary-color-tenis"></span>
+                    <span class="summary-discount summary-discount-tenis"></span>
+                  </small>
+                </span>
                 <strong>$829 MXN</strong>
+              </li>
+              <li class="summary-item summary-blusa-lino">
+                <span class="summary-product">
+                  Blusa Lino
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-blusa-lino"></span>
+                    <span class="summary-color summary-color-blusa-lino"></span>
+                    <span class="summary-discount summary-discount-blusa-lino">Promo de prenda: -$40 MXN</span>
+                  </small>
+                </span>
+                <strong>$429 MXN</strong>
+              </li>
+              <li class="summary-item summary-blusa-oliva">
+                <span class="summary-product">
+                  Blusa Oliva
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-blusa-oliva"></span>
+                    <span class="summary-color summary-color-blusa-oliva"></span>
+                  </small>
+                </span>
+                <strong>$459 MXN</strong>
+              </li>
+              <li class="summary-item summary-jeans-wide">
+                <span class="summary-product">
+                  Jeans Wide Leg
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-jeans-wide"></span>
+                    <span class="summary-color summary-color-jeans-wide"></span>
+                    <span class="summary-discount summary-discount-jeans-wide"></span>
+                  </small>
+                </span>
+                <strong>$729 MXN</strong>
+              </li>
+              <li class="summary-item summary-falda-denim">
+                <span class="summary-product">
+                  Falda Denim
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-falda-denim"></span>
+                    <span class="summary-color summary-color-falda-denim"></span>
+                    <span class="summary-discount summary-discount-falda-denim">Promo de prenda: -$50 MXN</span>
+                  </small>
+                </span>
+                <strong>$649 MXN</strong>
+              </li>
+              <li class="summary-item summary-abrigo-puffer">
+                <span class="summary-product">
+                  Puffer Urbano
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-abrigo-puffer"></span>
+                    <span class="summary-color summary-color-abrigo-puffer"></span>
+                    <span class="summary-discount summary-discount-abrigo-puffer"></span>
+                  </small>
+                </span>
+                <strong>$1099 MXN</strong>
+              </li>
+              <li class="summary-item summary-vestido-midi">
+                <span class="summary-product">
+                  Vestido Midi
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-vestido-midi"></span>
+                    <span class="summary-color summary-color-vestido-midi"></span>
+                  </small>
+                </span>
+                <strong>$799 MXN</strong>
+              </li>
+              <li class="summary-item summary-vestido-noche">
+                <span class="summary-product">
+                  Vestido Noche
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-vestido-noche"></span>
+                    <span class="summary-color summary-color-vestido-noche"></span>
+                    <span class="summary-discount summary-discount-vestido-noche"></span>
+                  </small>
+                </span>
+                <strong>$949 MXN</strong>
+              </li>
+              <li class="summary-item summary-bolso-mini">
+                <span class="summary-product">
+                  Bolso Mini
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-bolso-mini"></span>
+                    <span class="summary-color summary-color-bolso-mini"></span>
+                    <span class="summary-discount summary-discount-bolso-mini"></span>
+                  </small>
+                </span>
+                <strong>$699 MXN</strong>
+              </li>
+              <li class="summary-item summary-gafas-sol">
+                <span class="summary-product">
+                  Gafas Sol
+                  <small class="summary-detail">
+                    <span class="summary-size summary-size-gafas-sol"></span>
+                    <span class="summary-color summary-color-gafas-sol"></span>
+                  </small>
+                </span>
+                <strong>$299 MXN</strong>
               </li>
               <li class="empty-cart">Aún no hay prendas agregadas.</li>
             </ul>
-            <p class="total-row">Total <strong class="cart-total" aria-hidden="true"></strong></p>
+            <p class="total-row subtotal-row">Subtotal <strong class="cart-total" aria-hidden="true"></strong></p>
+            <p class="total-row discount-row">Descuentos <strong class="discount-total" aria-hidden="true"></strong></p>
+            <p class="total-row final-row">Total final <strong class="final-total" aria-hidden="true"></strong></p>
             <button class="button button-muted" type="reset" form="orderForm">Limpiar selección</button>
-            <p class="summary-footnote">Pedido sujeto a disponibilidad de talla y color.</p>
+            <p class="summary-footnote">El pedido incluye el repaso de talla, color, dirección y promociones aplicadas.</p>
           </aside>
         </div>
       </section>
