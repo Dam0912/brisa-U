@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Brisa Urbana, tienda ficticia de ropa casual con catálogo, tallas, multimedia y formulario de pedido."
+    >
+    <title>Brisa Urbana | Ropa casual</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+
+    <input class="state-control" type="checkbox" id="menu-control" aria-hidden="true">
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-playera"
+      name="prendas"
+      value="Playera Essential - $349 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-chamarra"
+      name="prendas"
+      value="Chamarra Weekend - $899 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-jeans"
+      name="prendas"
+      value="Jeans Mom Fit - $699 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-vestido"
+      name="prendas"
+      value="Vestido Sol - $749 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-sudadera"
+      name="prendas"
+      value="Sudadera Nube - $579 MXN"
+      form="orderForm"
+    >
+    <input
+      class="state-control cart-state"
+      type="checkbox"
+      id="cart-tenis"
+      name="prendas"
+      value="Tenis Ruta - $829 MXN"
+      form="orderForm"
+    >
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio de Brisa Urbana">
+          <span class="brand-mark">BU</span>
+          <span>Brisa Urbana</span>
+        </a>
+
+        <label class="menu-toggle" for="menu-control" aria-controls="menu">
+          Menú
+        </label>
+
+        <ul class="nav-list" id="menu">
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#tallas">Tallas</a></li>
+          <li><a href="#looks">Looks</a></li>
+          <li><a href="#pedido">Pedido</a></li>
+        </ul>
+
+        <a class="cart-link" href="#pedido" aria-label="Ver resumen del pedido">
+          <span class="cart-count" aria-hidden="true"></span> prendas
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+        <div class="hero-media" role="img" aria-label="Exhibición de ropa casual en una boutique moderna"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Nueva temporada</p>
+          <h1 id="titulo-principal">Brisa Urbana</h1>
+          <p>
+            Prendas cómodas, combinables y listas para moverse contigo desde clase hasta una salida con amigos.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#catalogo">Ver catálogo</a>
+            <a class="button button-light" href="#pedido">Armar pedido</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits" aria-label="Ventajas de la tienda">
+        <ul>
+          <li><strong>Envío local</strong><span>Entrega en 24 a 48 horas</span></li>
+          <li><strong>Cambios fáciles</strong><span>Hasta 15 días después de comprar</span></li>
+          <li><strong>Prendas base</strong><span>Colores neutros con acentos vivos</span></li>
+        </ul>
+      </section>
+
+      <section class="section" id="catalogo" aria-labelledby="catalogo-titulo">
+        <div class="section-heading">
+          <p class="eyebrow">Catálogo</p>
+          <h2 id="catalogo-titulo">Prendas para todos los días</h2>
+          <p>Filtra por categoría y agrega al resumen las piezas que te interesan.</p>
+        </div>
+
+        <input class="state-control filter-state" type="radio" name="filtro" id="filter-todo" checked>
+        <input class="state-control filter-state" type="radio" name="filtro" id="filter-tops">
+        <input class="state-control filter-state" type="radio" name="filtro" id="filter-denim">
+        <input class="state-control filter-state" type="radio" name="filtro" id="filter-exterior">
+        <input class="state-control filter-state" type="radio" name="filtro" id="filter-vestidos">
+        <input class="state-control filter-state" type="radio" name="filtro" id="filter-accesorios">
+
+        <div class="filters" aria-label="Filtrar productos por categoría">
+          <label class="filter-button" for="filter-todo">Todo</label>
+          <label class="filter-button" for="filter-tops">Tops</label>
+          <label class="filter-button" for="filter-denim">Denim</label>
+          <label class="filter-button" for="filter-exterior">Exterior</label>
+          <label class="filter-button" for="filter-vestidos">Vestidos</label>
+          <label class="filter-button" for="filter-accesorios">Accesorios</label>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card product-card-playera" data-category="tops">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80"
+                alt="Playera básica blanca colgada en un fondo claro"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Tops</p>
+              <h3>Playera Essential</h3>
+              <p>Algodón suave, corte relajado y cuello redondo para combinar con todo.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>XS</li>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+              </ul>
+              <div class="product-footer">
+                <strong>$349 MXN</strong>
+                <label class="add-to-cart" for="cart-playera">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-chamarra" data-category="exterior">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=80"
+                alt="Chamarra casual color oscuro sobre una superficie de madera"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Exterior</p>
+              <h3>Chamarra Weekend</h3>
+              <p>Ligera, con bolsillos frontales y acabado resistente para clima fresco.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+              </ul>
+              <div class="product-footer">
+                <strong>$899 MXN</strong>
+                <label class="add-to-cart" for="cart-chamarra">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-jeans" data-category="denim">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80"
+                alt="Jeans doblados en tonos azul denim"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Denim</p>
+              <h3>Jeans Mom Fit</h3>
+              <p>Tiro alto, pierna recta y mezclilla flexible para uso diario.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>26</li>
+                <li>28</li>
+                <li>30</li>
+                <li>32</li>
+              </ul>
+              <div class="product-footer">
+                <strong>$699 MXN</strong>
+                <label class="add-to-cart" for="cart-jeans">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-vestido" data-category="vestidos">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80"
+                alt="Vestido claro en una sesión de moda al aire libre"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Vestidos</p>
+              <h3>Vestido Sol</h3>
+              <p>Tejido fresco, caída ligera y silueta cómoda para días cálidos.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>XS</li>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+              </ul>
+              <div class="product-footer">
+                <strong>$749 MXN</strong>
+                <label class="add-to-cart" for="cart-vestido">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-sudadera" data-category="exterior">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=900&q=80"
+                alt="Sudadera de estilo urbano en color neutro"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Exterior</p>
+              <h3>Sudadera Nube</h3>
+              <p>Interior afelpado, capucha amplia y ajuste cómodo para capas.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+              </ul>
+              <div class="product-footer">
+                <strong>$579 MXN</strong>
+                <label class="add-to-cart" for="cart-sudadera">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-tenis" data-category="accesorios">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                alt="Tenis coloridos sobre fondo naranja"
+                loading="lazy"
+              >
+            </figure>
+            <div class="product-info">
+              <p class="product-meta">Accesorios</p>
+              <h3>Tenis Ruta</h3>
+              <p>Suela ligera, interior acolchado y contraste de color para outfits casuales.</p>
+              <ul class="size-list" aria-label="Tallas disponibles">
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+              </ul>
+              <div class="product-footer">
+                <strong>$829 MXN</strong>
+                <label class="add-to-cart" for="cart-tenis">
+                  <span class="add-label-text">Agregar</span>
+                  <span class="added-label-text">Agregado</span>
+                </label>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="style-band" aria-labelledby="combinaciones-titulo">
+        <div>
+          <p class="eyebrow">Ideas rápidas</p>
+          <h2 id="combinaciones-titulo">Arma un outfit en tres pasos</h2>
+          <ol class="steps">
+            <li>Elige una prenda base: playera, vestido o sudadera.</li>
+            <li>Agrega una capa: chamarra ligera o denim.</li>
+            <li>Cierra con un acento: tenis de color o accesorio neutro.</li>
+          </ol>
+        </div>
+        <aside class="color-board" aria-label="Paleta de temporada">
+          <span style="--swatch:#0f766e">Verde</span>
+          <span style="--swatch:#ef6351">Coral</span>
+          <span style="--swatch:#f2b84b">Mostaza</span>
+          <span style="--swatch:#315cfd">Azul</span>
+        </aside>
+      </section>
+
+      <section class="section size-section" id="tallas" aria-labelledby="tallas-titulo">
+        <div class="section-heading">
+          <p class="eyebrow">Guía</p>
+          <h2 id="tallas-titulo">Tallas principales</h2>
+          <p>Usa las medidas como referencia antes de elegir tus prendas.</p>
+          <ul class="size-notes" aria-label="Notas de tallas">
+            <li>Medidas en cm</li>
+            <li>Corte aproximado</li>
+            <li>Revisa jeans y tenis</li>
+          </ul>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <caption>
+              Medidas aproximadas en centímetros
+            </caption>
+            <colgroup>
+              <col>
+              <col span="3">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">Talla</th>
+                <th scope="col">Pecho</th>
+                <th scope="col">Cintura</th>
+                <th scope="col">Cadera</th>
+                <th scope="col">Recomendación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">XS</th>
+                <td>78-84</td>
+                <td>60-66</td>
+                <td>86-92</td>
+                <td>Ajuste ceñido</td>
+              </tr>
+              <tr>
+                <th scope="row">S</th>
+                <td>84-90</td>
+                <td>66-72</td>
+                <td>92-98</td>
+                <td>Corte regular</td>
+              </tr>
+              <tr>
+                <th scope="row">M</th>
+                <td>90-98</td>
+                <td>72-80</td>
+                <td>98-106</td>
+                <td>Uso diario</td>
+              </tr>
+              <tr>
+                <th scope="row">L</th>
+                <td>98-106</td>
+                <td>80-88</td>
+                <td>106-114</td>
+                <td>Más holgura</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">Para jeans y tenis consulta también la talla numérica de cada producto.</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <section class="section media-section" id="looks" aria-labelledby="looks-titulo">
+        <div class="media-copy">
+          <p class="eyebrow">Looks</p>
+          <h2 id="looks-titulo">Ambiente de temporada</h2>
+          <p>
+            Un vistazo visual para acompañar la selección de prendas y darle vida al escaparate digital.
+          </p>
+          <ul class="look-notes" aria-label="Detalles del look">
+            <li>Capas ligeras</li>
+            <li>Denim diario</li>
+            <li>Acentos de color</li>
+          </ul>
+        </div>
+
+        <figure class="feature-figure">
+          <video controls preload="metadata" poster="assets/hero-fashion.png">
+            <source
+              src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+              type="video/mp4"
+            >
+            Tu navegador no puede reproducir este video.
+          </video>
+          <figcaption>Video de inspiración visual para la temporada.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section order-section" id="pedido" aria-labelledby="pedido-titulo">
+        <div class="section-heading">
+          <p class="eyebrow">Pedido</p>
+          <h2 id="pedido-titulo">Solicita tus prendas</h2>
+          <p>Completa tus datos y revisa el resumen antes de enviar.</p>
+          <ul class="order-benefits" aria-label="Ventajas del pedido">
+            <li>Respuesta rápida</li>
+            <li>Cambios fáciles</li>
+            <li>Sin pago inmediato</li>
+          </ul>
+        </div>
+
+        <div class="order-layout">
+          <form
+            class="order-form"
+            id="orderForm"
+            action="mailto:pedidos@brisaurbana.example"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="form-grid">
+              <label class="field-half">
+                Nombre completo
+                <input type="text" name="nombre" autocomplete="name" required placeholder="Tu nombre">
+              </label>
+              <label class="field-half">
+                Correo
+                <input type="email" name="correo" autocomplete="email" required placeholder="correo@ejemplo.com">
+              </label>
+              <label class="field-half">
+                Teléfono
+                <input type="tel" name="telefono" autocomplete="tel" placeholder="844 000 0000">
+              </label>
+              <label class="field-half">
+                Ciudad
+                <input type="text" name="ciudad" autocomplete="address-level2" placeholder="Tu ciudad">
+              </label>
+              <label class="field-main">
+                Prenda principal
+                <select name="favorita" required>
+                  <option value="">Selecciona una opción</option>
+                  <option>Playera Essential</option>
+                  <option>Chamarra Weekend</option>
+                  <option>Jeans Mom Fit</option>
+                  <option>Vestido Sol</option>
+                  <option>Sudadera Nube</option>
+                  <option>Tenis Ruta</option>
+                </select>
+              </label>
+              <label class="field-small">
+                Cantidad
+                <input type="number" name="cantidad" min="1" max="10" value="1">
+              </label>
+              <label class="field-small">
+                Talla
+                <select name="talla">
+                  <option>XS</option>
+                  <option>S</option>
+                  <option selected>M</option>
+                  <option>L</option>
+                  <option>XL</option>
+                  <option>Numérica</option>
+                </select>
+              </label>
+              <label class="field-small">
+                Color
+                <input type="color" name="color" value="#0f766e">
+              </label>
+            </div>
+
+            <div class="order-options">
+              <fieldset class="option-group">
+                <legend>Entrega</legend>
+                <div class="choice-grid">
+                  <label class="choice-card">
+                    <input type="radio" name="entrega" value="domicilio" checked>
+                    <span>
+                      <strong>A domicilio</strong>
+                      <small>Entrega local de 24 a 48 horas</small>
+                    </span>
+                  </label>
+                  <label class="choice-card">
+                    <input type="radio" name="entrega" value="tienda">
+                    <span>
+                      <strong>Recoger en tienda</strong>
+                      <small>Pasa cuando tu pedido esté listo</small>
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="option-group">
+                <legend>Extras</legend>
+                <div class="choice-grid">
+                  <label class="choice-card">
+                    <input type="checkbox" name="extra" value="envoltura">
+                    <span>
+                      <strong>Envoltura</strong>
+                      <small>Lista para regalo</small>
+                    </span>
+                  </label>
+                  <label class="choice-card">
+                    <input type="checkbox" name="extra" value="avisos">
+                    <span>
+                      <strong>Novedades</strong>
+                      <small>Avisos de nuevas colecciones</small>
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <label class="field-full comments-field">
+              Comentarios
+              <textarea name="comentarios" rows="3" placeholder="Talla numérica, color alternativo o detalles del pedido"></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button class="button" type="submit">Enviar solicitud</button>
+              <button class="button button-muted" type="reset">Limpiar</button>
+            </div>
+          </form>
+
+          <aside class="summary" aria-labelledby="resumen-titulo">
+            <div class="summary-header">
+              <p class="summary-kicker">Resumen</p>
+              <h3 id="resumen-titulo">Tu pedido</h3>
+            </div>
+            <ul id="cartItems">
+              <li class="summary-item summary-playera">
+                <span>Playera Essential</span>
+                <strong>$349 MXN</strong>
+              </li>
+              <li class="summary-item summary-chamarra">
+                <span>Chamarra Weekend</span>
+                <strong>$899 MXN</strong>
+              </li>
+              <li class="summary-item summary-jeans">
+                <span>Jeans Mom Fit</span>
+                <strong>$699 MXN</strong>
+              </li>
+              <li class="summary-item summary-vestido">
+                <span>Vestido Sol</span>
+                <strong>$749 MXN</strong>
+              </li>
+              <li class="summary-item summary-sudadera">
+                <span>Sudadera Nube</span>
+                <strong>$579 MXN</strong>
+              </li>
+              <li class="summary-item summary-tenis">
+                <span>Tenis Ruta</span>
+                <strong>$829 MXN</strong>
+              </li>
+              <li class="empty-cart">Aún no hay prendas agregadas.</li>
+            </ul>
+            <p class="total-row">Total <strong class="cart-total" aria-hidden="true"></strong></p>
+            <button class="button button-muted" type="reset" form="orderForm">Limpiar selección</button>
+            <p class="summary-footnote">Pedido sujeto a disponibilidad de talla y color.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Brisa Urbana es una tienda ficticia creada para una práctica de HTML y CSS.</p>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="https://www.aulaclic.es/html/index.htm" target="_blank" rel="noreferrer">Referencia HTML</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
