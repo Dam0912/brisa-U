@@ -23,7 +23,7 @@ body {
   margin: 0;
   background: var(--surface);
   color: var(--ink);
-  counter-reset: cart-count cart-total;
+  counter-reset: cart-count cart-total cart-discount cart-final;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
   letter-spacing: 0;
@@ -65,27 +65,87 @@ section {
 }
 
 #cart-playera:checked {
-  counter-increment: cart-count 1 cart-total 349;
+  counter-increment: cart-count 1 cart-total 349 cart-final 349;
 }
 
 #cart-chamarra:checked {
-  counter-increment: cart-count 1 cart-total 899;
+  counter-increment: cart-count 1 cart-total 899 cart-final 899;
 }
 
 #cart-jeans:checked {
-  counter-increment: cart-count 1 cart-total 699;
+  counter-increment: cart-count 1 cart-total 699 cart-final 699;
 }
 
 #cart-vestido:checked {
-  counter-increment: cart-count 1 cart-total 749;
+  counter-increment: cart-count 1 cart-total 749 cart-final 749;
 }
 
 #cart-sudadera:checked {
-  counter-increment: cart-count 1 cart-total 579;
+  counter-increment: cart-count 1 cart-total 579 cart-final 579;
 }
 
 #cart-tenis:checked {
-  counter-increment: cart-count 1 cart-total 829;
+  counter-increment: cart-count 1 cart-total 829 cart-final 829;
+}
+
+#cart-blusa-lino:checked {
+  counter-increment: cart-count 1 cart-total 429 cart-discount 40 cart-final 389;
+}
+
+#cart-blusa-oliva:checked {
+  counter-increment: cart-count 1 cart-total 459 cart-final 459;
+}
+
+#cart-jeans-wide:checked {
+  counter-increment: cart-count 1 cart-total 729 cart-final 729;
+}
+
+#cart-falda-denim:checked {
+  counter-increment: cart-count 1 cart-total 649 cart-discount 50 cart-final 599;
+}
+
+#cart-abrigo-puffer:checked {
+  counter-increment: cart-count 1 cart-total 1099 cart-final 1099;
+}
+
+#cart-vestido-midi:checked {
+  counter-increment: cart-count 1 cart-total 799 cart-final 799;
+}
+
+#cart-vestido-noche:checked {
+  counter-increment: cart-count 1 cart-total 949 cart-final 949;
+}
+
+#cart-bolso-mini:checked {
+  counter-increment: cart-count 1 cart-total 699 cart-final 699;
+}
+
+#cart-gafas-sol:checked {
+  counter-increment: cart-count 1 cart-total 299 cart-final 299;
+}
+
+#cart-sudadera:checked ~ main select[name="sudadera-nube-color"]:has(option:nth-child(4):checked) {
+  counter-increment: cart-discount 35 cart-final -35;
+}
+
+#cart-tenis:checked ~ main select[name="tenis-ruta-talla"]:has(option:nth-child(5):checked) {
+  counter-increment: cart-discount 50 cart-final -50;
+}
+
+#cart-jeans-wide:checked ~ main select[name="jeans-wide-leg-color"]:has(option:nth-child(4):checked) {
+  counter-increment: cart-discount 40 cart-final -40;
+}
+
+#cart-abrigo-puffer:checked ~ main select[name="puffer-urbano-talla"]:has(option:nth-child(5):checked) {
+  counter-increment: cart-discount 60 cart-final -60;
+}
+
+#cart-vestido-noche:checked ~ main select[name="vestido-noche-color"]:has(option:nth-child(3):checked) {
+  counter-increment: cart-discount 80 cart-final -80;
+}
+
+#cart-bolso-mini:checked ~ main select[name="bolso-mini-color"]:has(option:nth-child(4):checked) {
+  counter-increment: cart-discount 35 cart-final -35;
 }
 
 .skip-link {
@@ -165,7 +225,35 @@ section {
 #cart-jeans:focus-visible ~ main label[for="cart-jeans"],
 #cart-vestido:focus-visible ~ main label[for="cart-vestido"],
 #cart-sudadera:focus-visible ~ main label[for="cart-sudadera"],
-#cart-tenis:focus-visible ~ main label[for="cart-tenis"] {
+#cart-tenis:focus-visible ~ main label[for="cart-tenis"],
+#cart-blusa-lino:focus-visible ~ main label[for="cart-blusa-lino"],
+#cart-blusa-oliva:focus-visible ~ main label[for="cart-blusa-oliva"],
+#cart-jeans-wide:focus-visible ~ main label[for="cart-jeans-wide"],
+#cart-falda-denim:focus-visible ~ main label[for="cart-falda-denim"],
+#cart-abrigo-puffer:focus-visible ~ main label[for="cart-abrigo-puffer"],
+#cart-vestido-midi:focus-visible ~ main label[for="cart-vestido-midi"],
+#cart-vestido-noche:focus-visible ~ main label[for="cart-vestido-noche"],
+#cart-bolso-mini:focus-visible ~ main label[for="cart-bolso-mini"],
+#cart-gafas-sol:focus-visible ~ main label[for="cart-gafas-sol"] {
+  outline: 3px solid rgba(242, 184, 75, 0.75);
+  outline-offset: 3px;
+}
+
+#order-playera:focus-visible ~ main label[for="order-playera"],
+#order-chamarra:focus-visible ~ main label[for="order-chamarra"],
+#order-jeans:focus-visible ~ main label[for="order-jeans"],
+#order-vestido:focus-visible ~ main label[for="order-vestido"],
+#order-sudadera:focus-visible ~ main label[for="order-sudadera"],
+#order-tenis:focus-visible ~ main label[for="order-tenis"],
+#order-blusa-lino:focus-visible ~ main label[for="order-blusa-lino"],
+#order-blusa-oliva:focus-visible ~ main label[for="order-blusa-oliva"],
+#order-jeans-wide:focus-visible ~ main label[for="order-jeans-wide"],
+#order-falda-denim:focus-visible ~ main label[for="order-falda-denim"],
+#order-abrigo-puffer:focus-visible ~ main label[for="order-abrigo-puffer"],
+#order-vestido-midi:focus-visible ~ main label[for="order-vestido-midi"],
+#order-vestido-noche:focus-visible ~ main label[for="order-vestido-noche"],
+#order-bolso-mini:focus-visible ~ main label[for="order-bolso-mini"],
+#order-gafas-sol:focus-visible ~ main label[for="order-gafas-sol"] {
   outline: 3px solid rgba(242, 184, 75, 0.75);
   outline-offset: 3px;
 }
@@ -294,6 +382,7 @@ section {
 
 .button,
 .filter-button,
+.order-button,
 .add-to-cart {
   min-height: 44px;
   border: 0;
@@ -311,6 +400,8 @@ section {
 
 .button:hover,
 .button:focus,
+.order-button:hover,
+.order-button:focus,
 .add-to-cart:hover,
 .add-to-cart:focus {
   background: #0b5f59;
@@ -518,17 +609,58 @@ section {
   font-weight: 800;
 }
 
+.product-choice {
+  display: none;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 0.85rem;
+}
+
+.product-choice label {
+  min-width: 0;
+  font-size: 0.82rem;
+}
+
+.product-choice select {
+  min-height: 40px;
+  padding: 0.55rem 0.65rem;
+}
+
+.discount-note {
+  margin: 0;
+  border: 1px solid rgba(15, 127, 116, 0.22);
+  border-radius: 8px;
+  background: #ecf9f6;
+  color: var(--teal-dark);
+  font-size: 0.84rem;
+  font-weight: 900;
+  padding: 0.55rem 0.7rem;
+}
+
 .product-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 0.8rem;
   margin-top: auto;
 }
 
+.order-button,
 .add-to-cart {
   min-width: 96px;
   padding: 0.6rem 0.8rem;
+}
+
+.order-button {
+  background: var(--teal);
+}
+
+.add-to-cart {
+  display: none;
   background: var(--ink);
 }
 
@@ -541,8 +673,54 @@ section {
 #cart-jeans:checked ~ main label[for="cart-jeans"],
 #cart-vestido:checked ~ main label[for="cart-vestido"],
 #cart-sudadera:checked ~ main label[for="cart-sudadera"],
-#cart-tenis:checked ~ main label[for="cart-tenis"] {
+#cart-tenis:checked ~ main label[for="cart-tenis"],
+#cart-blusa-lino:checked ~ main label[for="cart-blusa-lino"],
+#cart-blusa-oliva:checked ~ main label[for="cart-blusa-oliva"],
+#cart-jeans-wide:checked ~ main label[for="cart-jeans-wide"],
+#cart-falda-denim:checked ~ main label[for="cart-falda-denim"],
+#cart-abrigo-puffer:checked ~ main label[for="cart-abrigo-puffer"],
+#cart-vestido-midi:checked ~ main label[for="cart-vestido-midi"],
+#cart-vestido-noche:checked ~ main label[for="cart-vestido-noche"],
+#cart-bolso-mini:checked ~ main label[for="cart-bolso-mini"],
+#cart-gafas-sol:checked ~ main label[for="cart-gafas-sol"] {
+  display: inline-flex;
   background: var(--coral);
+}
+
+#order-playera:checked ~ main label[for="order-playera"],
+#order-chamarra:checked ~ main label[for="order-chamarra"],
+#order-jeans:checked ~ main label[for="order-jeans"],
+#order-vestido:checked ~ main label[for="order-vestido"],
+#order-sudadera:checked ~ main label[for="order-sudadera"],
+#order-tenis:checked ~ main label[for="order-tenis"],
+#order-blusa-lino:checked ~ main label[for="order-blusa-lino"],
+#order-blusa-oliva:checked ~ main label[for="order-blusa-oliva"],
+#order-jeans-wide:checked ~ main label[for="order-jeans-wide"],
+#order-falda-denim:checked ~ main label[for="order-falda-denim"],
+#order-abrigo-puffer:checked ~ main label[for="order-abrigo-puffer"],
+#order-vestido-midi:checked ~ main label[for="order-vestido-midi"],
+#order-vestido-noche:checked ~ main label[for="order-vestido-noche"],
+#order-bolso-mini:checked ~ main label[for="order-bolso-mini"],
+#order-gafas-sol:checked ~ main label[for="order-gafas-sol"] {
+  background: #0b5f59;
+}
+
+#cart-playera:checked ~ main label[for="order-playera"],
+#cart-chamarra:checked ~ main label[for="order-chamarra"],
+#cart-jeans:checked ~ main label[for="order-jeans"],
+#cart-vestido:checked ~ main label[for="order-vestido"],
+#cart-sudadera:checked ~ main label[for="order-sudadera"],
+#cart-tenis:checked ~ main label[for="order-tenis"],
+#cart-blusa-lino:checked ~ main label[for="order-blusa-lino"],
+#cart-blusa-oliva:checked ~ main label[for="order-blusa-oliva"],
+#cart-jeans-wide:checked ~ main label[for="order-jeans-wide"],
+#cart-falda-denim:checked ~ main label[for="order-falda-denim"],
+#cart-abrigo-puffer:checked ~ main label[for="order-abrigo-puffer"],
+#cart-vestido-midi:checked ~ main label[for="order-vestido-midi"],
+#cart-vestido-noche:checked ~ main label[for="order-vestido-noche"],
+#cart-bolso-mini:checked ~ main label[for="order-bolso-mini"],
+#cart-gafas-sol:checked ~ main label[for="order-gafas-sol"] {
+  display: none;
 }
 
 #cart-playera:checked ~ main .product-card-playera,
@@ -550,9 +728,69 @@ section {
 #cart-jeans:checked ~ main .product-card-jeans,
 #cart-vestido:checked ~ main .product-card-vestido,
 #cart-sudadera:checked ~ main .product-card-sudadera,
-#cart-tenis:checked ~ main .product-card-tenis {
+#cart-tenis:checked ~ main .product-card-tenis,
+#cart-blusa-lino:checked ~ main .product-card-blusa-lino,
+#cart-blusa-oliva:checked ~ main .product-card-blusa-oliva,
+#cart-jeans-wide:checked ~ main .product-card-jeans-wide,
+#cart-falda-denim:checked ~ main .product-card-falda-denim,
+#cart-abrigo-puffer:checked ~ main .product-card-abrigo-puffer,
+#cart-vestido-midi:checked ~ main .product-card-vestido-midi,
+#cart-vestido-noche:checked ~ main .product-card-vestido-noche,
+#cart-bolso-mini:checked ~ main .product-card-bolso-mini,
+#cart-gafas-sol:checked ~ main .product-card-gafas-sol {
   border-color: var(--teal);
   box-shadow: 0 12px 30px rgba(15, 118, 110, 0.18);
+}
+
+#order-playera:checked ~ main .product-card-playera .product-choice,
+#order-chamarra:checked ~ main .product-card-chamarra .product-choice,
+#order-jeans:checked ~ main .product-card-jeans .product-choice,
+#order-vestido:checked ~ main .product-card-vestido .product-choice,
+#order-sudadera:checked ~ main .product-card-sudadera .product-choice,
+#order-tenis:checked ~ main .product-card-tenis .product-choice,
+#order-blusa-lino:checked ~ main .product-card-blusa-lino .product-choice,
+#order-blusa-oliva:checked ~ main .product-card-blusa-oliva .product-choice,
+#order-jeans-wide:checked ~ main .product-card-jeans-wide .product-choice,
+#order-falda-denim:checked ~ main .product-card-falda-denim .product-choice,
+#order-abrigo-puffer:checked ~ main .product-card-abrigo-puffer .product-choice,
+#order-vestido-midi:checked ~ main .product-card-vestido-midi .product-choice,
+#order-vestido-noche:checked ~ main .product-card-vestido-noche .product-choice,
+#order-bolso-mini:checked ~ main .product-card-bolso-mini .product-choice,
+#order-gafas-sol:checked ~ main .product-card-gafas-sol .product-choice,
+#cart-playera:checked ~ main .product-card-playera .product-choice,
+#cart-chamarra:checked ~ main .product-card-chamarra .product-choice,
+#cart-jeans:checked ~ main .product-card-jeans .product-choice,
+#cart-vestido:checked ~ main .product-card-vestido .product-choice,
+#cart-sudadera:checked ~ main .product-card-sudadera .product-choice,
+#cart-tenis:checked ~ main .product-card-tenis .product-choice,
+#cart-blusa-lino:checked ~ main .product-card-blusa-lino .product-choice,
+#cart-blusa-oliva:checked ~ main .product-card-blusa-oliva .product-choice,
+#cart-jeans-wide:checked ~ main .product-card-jeans-wide .product-choice,
+#cart-falda-denim:checked ~ main .product-card-falda-denim .product-choice,
+#cart-abrigo-puffer:checked ~ main .product-card-abrigo-puffer .product-choice,
+#cart-vestido-midi:checked ~ main .product-card-vestido-midi .product-choice,
+#cart-vestido-noche:checked ~ main .product-card-vestido-noche .product-choice,
+#cart-bolso-mini:checked ~ main .product-card-bolso-mini .product-choice,
+#cart-gafas-sol:checked ~ main .product-card-gafas-sol .product-choice {
+  display: grid;
+}
+
+#order-playera:checked ~ main .product-card-playera:has(select[name="blusa-essential-talla"] option:nth-child(n+2):checked):has(select[name="blusa-essential-color"] option:nth-child(n+2):checked) label[for="cart-playera"],
+#order-chamarra:checked ~ main .product-card-chamarra:has(select[name="chamarra-weekend-talla"] option:nth-child(n+2):checked):has(select[name="chamarra-weekend-color"] option:nth-child(n+2):checked) label[for="cart-chamarra"],
+#order-jeans:checked ~ main .product-card-jeans:has(select[name="jeans-mom-fit-talla"] option:nth-child(n+2):checked):has(select[name="jeans-mom-fit-color"] option:nth-child(n+2):checked) label[for="cart-jeans"],
+#order-vestido:checked ~ main .product-card-vestido:has(select[name="vestido-sol-talla"] option:nth-child(n+2):checked):has(select[name="vestido-sol-color"] option:nth-child(n+2):checked) label[for="cart-vestido"],
+#order-sudadera:checked ~ main .product-card-sudadera:has(select[name="sudadera-nube-talla"] option:nth-child(n+2):checked):has(select[name="sudadera-nube-color"] option:nth-child(n+2):checked) label[for="cart-sudadera"],
+#order-tenis:checked ~ main .product-card-tenis:has(select[name="tenis-ruta-talla"] option:nth-child(n+2):checked):has(select[name="tenis-ruta-color"] option:nth-child(n+2):checked) label[for="cart-tenis"],
+#order-blusa-lino:checked ~ main .product-card-blusa-lino:has(select[name="blusa-lino-talla"] option:nth-child(n+2):checked):has(select[name="blusa-lino-color"] option:nth-child(n+2):checked) label[for="cart-blusa-lino"],
+#order-blusa-oliva:checked ~ main .product-card-blusa-oliva:has(select[name="blusa-oliva-talla"] option:nth-child(n+2):checked):has(select[name="blusa-oliva-color"] option:nth-child(n+2):checked) label[for="cart-blusa-oliva"],
+#order-jeans-wide:checked ~ main .product-card-jeans-wide:has(select[name="jeans-wide-leg-talla"] option:nth-child(n+2):checked):has(select[name="jeans-wide-leg-color"] option:nth-child(n+2):checked) label[for="cart-jeans-wide"],
+#order-falda-denim:checked ~ main .product-card-falda-denim:has(select[name="falda-denim-talla"] option:nth-child(n+2):checked):has(select[name="falda-denim-color"] option:nth-child(n+2):checked) label[for="cart-falda-denim"],
+#order-abrigo-puffer:checked ~ main .product-card-abrigo-puffer:has(select[name="puffer-urbano-talla"] option:nth-child(n+2):checked):has(select[name="puffer-urbano-color"] option:nth-child(n+2):checked) label[for="cart-abrigo-puffer"],
+#order-vestido-midi:checked ~ main .product-card-vestido-midi:has(select[name="vestido-midi-talla"] option:nth-child(n+2):checked):has(select[name="vestido-midi-color"] option:nth-child(n+2):checked) label[for="cart-vestido-midi"],
+#order-vestido-noche:checked ~ main .product-card-vestido-noche:has(select[name="vestido-noche-talla"] option:nth-child(n+2):checked):has(select[name="vestido-noche-color"] option:nth-child(n+2):checked) label[for="cart-vestido-noche"],
+#order-bolso-mini:checked ~ main .product-card-bolso-mini:has(select[name="bolso-mini-talla"] option:nth-child(n+2):checked):has(select[name="bolso-mini-color"] option:nth-child(n+2):checked) label[for="cart-bolso-mini"],
+#order-gafas-sol:checked ~ main .product-card-gafas-sol:has(select[name="gafas-sol-talla"] option:nth-child(n+2):checked):has(select[name="gafas-sol-color"] option:nth-child(n+2):checked) label[for="cart-gafas-sol"] {
+  display: inline-flex;
 }
 
 #cart-playera:checked ~ main label[for="cart-playera"] .add-label-text,
@@ -560,7 +798,16 @@ section {
 #cart-jeans:checked ~ main label[for="cart-jeans"] .add-label-text,
 #cart-vestido:checked ~ main label[for="cart-vestido"] .add-label-text,
 #cart-sudadera:checked ~ main label[for="cart-sudadera"] .add-label-text,
-#cart-tenis:checked ~ main label[for="cart-tenis"] .add-label-text {
+#cart-tenis:checked ~ main label[for="cart-tenis"] .add-label-text,
+#cart-blusa-lino:checked ~ main label[for="cart-blusa-lino"] .add-label-text,
+#cart-blusa-oliva:checked ~ main label[for="cart-blusa-oliva"] .add-label-text,
+#cart-jeans-wide:checked ~ main label[for="cart-jeans-wide"] .add-label-text,
+#cart-falda-denim:checked ~ main label[for="cart-falda-denim"] .add-label-text,
+#cart-abrigo-puffer:checked ~ main label[for="cart-abrigo-puffer"] .add-label-text,
+#cart-vestido-midi:checked ~ main label[for="cart-vestido-midi"] .add-label-text,
+#cart-vestido-noche:checked ~ main label[for="cart-vestido-noche"] .add-label-text,
+#cart-bolso-mini:checked ~ main label[for="cart-bolso-mini"] .add-label-text,
+#cart-gafas-sol:checked ~ main label[for="cart-gafas-sol"] .add-label-text {
   display: none;
 }
 
@@ -569,7 +816,16 @@ section {
 #cart-jeans:checked ~ main label[for="cart-jeans"] .added-label-text,
 #cart-vestido:checked ~ main label[for="cart-vestido"] .added-label-text,
 #cart-sudadera:checked ~ main label[for="cart-sudadera"] .added-label-text,
-#cart-tenis:checked ~ main label[for="cart-tenis"] .added-label-text {
+#cart-tenis:checked ~ main label[for="cart-tenis"] .added-label-text,
+#cart-blusa-lino:checked ~ main label[for="cart-blusa-lino"] .added-label-text,
+#cart-blusa-oliva:checked ~ main label[for="cart-blusa-oliva"] .added-label-text,
+#cart-jeans-wide:checked ~ main label[for="cart-jeans-wide"] .added-label-text,
+#cart-falda-denim:checked ~ main label[for="cart-falda-denim"] .added-label-text,
+#cart-abrigo-puffer:checked ~ main label[for="cart-abrigo-puffer"] .added-label-text,
+#cart-vestido-midi:checked ~ main label[for="cart-vestido-midi"] .added-label-text,
+#cart-vestido-noche:checked ~ main label[for="cart-vestido-noche"] .added-label-text,
+#cart-bolso-mini:checked ~ main label[for="cart-bolso-mini"] .added-label-text,
+#cart-gafas-sol:checked ~ main label[for="cart-gafas-sol"] .added-label-text {
   display: inline;
 }
 
@@ -801,28 +1057,6 @@ tfoot td {
   grid-column: 1;
 }
 
-.order-benefits {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  grid-column: 2;
-  grid-row: 1 / span 3;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.order-benefits li {
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: #fff;
-  color: var(--ink);
-  font-size: 0.86rem;
-  font-weight: 800;
-  padding: 0.45rem 0.65rem;
-}
-
 .order-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 360px;
@@ -914,7 +1148,7 @@ input[type="color"] {
 }
 
 .field-small {
-  grid-column: span 2;
+  grid-column: span 3;
 }
 
 .field-full {
@@ -1044,12 +1278,59 @@ textarea {
   display: none;
 }
 
+.summary-product {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.summary-detail {
+  display: grid;
+  gap: 0.1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.summary-size::before {
+  content: "Talla: ";
+}
+
+.summary-color::before {
+  content: "Color: ";
+}
+
+.summary-size::after,
+.summary-color::after {
+  content: "por elegir";
+}
+
+.summary-discount {
+  display: none;
+  color: #b9f3df;
+}
+
+.summary-discount-blusa-lino,
+.summary-discount-falda-denim {
+  display: inline;
+}
+
 #cart-playera:checked ~ main .summary-playera,
 #cart-chamarra:checked ~ main .summary-chamarra,
 #cart-jeans:checked ~ main .summary-jeans,
 #cart-vestido:checked ~ main .summary-vestido,
 #cart-sudadera:checked ~ main .summary-sudadera,
-#cart-tenis:checked ~ main .summary-tenis {
+#cart-tenis:checked ~ main .summary-tenis,
+#cart-blusa-lino:checked ~ main .summary-blusa-lino,
+#cart-blusa-oliva:checked ~ main .summary-blusa-oliva,
+#cart-jeans-wide:checked ~ main .summary-jeans-wide,
+#cart-falda-denim:checked ~ main .summary-falda-denim,
+#cart-abrigo-puffer:checked ~ main .summary-abrigo-puffer,
+#cart-vestido-midi:checked ~ main .summary-vestido-midi,
+#cart-vestido-noche:checked ~ main .summary-vestido-noche,
+#cart-bolso-mini:checked ~ main .summary-bolso-mini,
+#cart-gafas-sol:checked ~ main .summary-gafas-sol {
   display: flex;
 }
 
@@ -1058,7 +1339,16 @@ textarea {
 #cart-jeans:checked ~ main .empty-cart,
 #cart-vestido:checked ~ main .empty-cart,
 #cart-sudadera:checked ~ main .empty-cart,
-#cart-tenis:checked ~ main .empty-cart {
+#cart-tenis:checked ~ main .empty-cart,
+#cart-blusa-lino:checked ~ main .empty-cart,
+#cart-blusa-oliva:checked ~ main .empty-cart,
+#cart-jeans-wide:checked ~ main .empty-cart,
+#cart-falda-denim:checked ~ main .empty-cart,
+#cart-abrigo-puffer:checked ~ main .empty-cart,
+#cart-vestido-midi:checked ~ main .empty-cart,
+#cart-vestido-noche:checked ~ main .empty-cart,
+#cart-bolso-mini:checked ~ main .empty-cart,
+#cart-gafas-sol:checked ~ main .empty-cart {
   display: none;
 }
 
@@ -1070,14 +1360,153 @@ textarea {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin: 1.2rem 0;
+  margin: 0.75rem 0;
   color: #fff;
   font-weight: 900;
+}
+
+.subtotal-row {
+  margin-top: 1.2rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+}
+
+.discount-row {
+  color: #b9f3df;
+  font-size: 0.9rem;
+}
+
+.final-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  font-size: 1.08rem;
 }
 
 .cart-total::before {
   content: "$" counter(cart-total) " MXN";
 }
+
+.discount-total::before {
+  content: "-$" counter(cart-discount) " MXN";
+}
+
+.final-total::before {
+  content: "$" counter(cart-final) " MXN";
+}
+
+body:has(select[name="blusa-essential-talla"] option:nth-child(2):checked) .summary-size-playera::after { content: "XS"; }
+body:has(select[name="blusa-essential-talla"] option:nth-child(3):checked) .summary-size-playera::after { content: "S"; }
+body:has(select[name="blusa-essential-talla"] option:nth-child(4):checked) .summary-size-playera::after { content: "M"; }
+body:has(select[name="blusa-essential-talla"] option:nth-child(5):checked) .summary-size-playera::after { content: "L"; }
+body:has(select[name="blusa-essential-color"] option:nth-child(2):checked) .summary-color-playera::after { content: "Blanco"; }
+body:has(select[name="blusa-essential-color"] option:nth-child(3):checked) .summary-color-playera::after { content: "Negro"; }
+body:has(select[name="blusa-essential-color"] option:nth-child(4):checked) .summary-color-playera::after { content: "Verde"; }
+body:has(select[name="chamarra-weekend-talla"] option:nth-child(2):checked) .summary-size-chamarra::after { content: "S"; }
+body:has(select[name="chamarra-weekend-talla"] option:nth-child(3):checked) .summary-size-chamarra::after { content: "M"; }
+body:has(select[name="chamarra-weekend-talla"] option:nth-child(4):checked) .summary-size-chamarra::after { content: "L"; }
+body:has(select[name="chamarra-weekend-talla"] option:nth-child(5):checked) .summary-size-chamarra::after { content: "XL"; }
+body:has(select[name="chamarra-weekend-color"] option:nth-child(2):checked) .summary-color-chamarra::after { content: "Negro"; }
+body:has(select[name="chamarra-weekend-color"] option:nth-child(3):checked) .summary-color-chamarra::after { content: "Azul marino"; }
+body:has(select[name="chamarra-weekend-color"] option:nth-child(4):checked) .summary-color-chamarra::after { content: "Oliva"; }
+body:has(select[name="jeans-mom-fit-talla"] option:nth-child(2):checked) .summary-size-jeans::after { content: "26"; }
+body:has(select[name="jeans-mom-fit-talla"] option:nth-child(3):checked) .summary-size-jeans::after { content: "28"; }
+body:has(select[name="jeans-mom-fit-talla"] option:nth-child(4):checked) .summary-size-jeans::after { content: "30"; }
+body:has(select[name="jeans-mom-fit-talla"] option:nth-child(5):checked) .summary-size-jeans::after { content: "32"; }
+body:has(select[name="jeans-mom-fit-color"] option:nth-child(2):checked) .summary-color-jeans::after { content: "Azul claro"; }
+body:has(select[name="jeans-mom-fit-color"] option:nth-child(3):checked) .summary-color-jeans::after { content: "Azul medio"; }
+body:has(select[name="jeans-mom-fit-color"] option:nth-child(4):checked) .summary-color-jeans::after { content: "Negro"; }
+body:has(select[name="vestido-sol-talla"] option:nth-child(2):checked) .summary-size-vestido::after { content: "XS"; }
+body:has(select[name="vestido-sol-talla"] option:nth-child(3):checked) .summary-size-vestido::after { content: "S"; }
+body:has(select[name="vestido-sol-talla"] option:nth-child(4):checked) .summary-size-vestido::after { content: "M"; }
+body:has(select[name="vestido-sol-talla"] option:nth-child(5):checked) .summary-size-vestido::after { content: "L"; }
+body:has(select[name="vestido-sol-color"] option:nth-child(2):checked) .summary-color-vestido::after { content: "Blanco"; }
+body:has(select[name="vestido-sol-color"] option:nth-child(3):checked) .summary-color-vestido::after { content: "Coral"; }
+body:has(select[name="vestido-sol-color"] option:nth-child(4):checked) .summary-color-vestido::after { content: "Mostaza"; }
+body:has(select[name="sudadera-nube-talla"] option:nth-child(2):checked) .summary-size-sudadera::after { content: "S"; }
+body:has(select[name="sudadera-nube-talla"] option:nth-child(3):checked) .summary-size-sudadera::after { content: "M"; }
+body:has(select[name="sudadera-nube-talla"] option:nth-child(4):checked) .summary-size-sudadera::after { content: "L"; }
+body:has(select[name="sudadera-nube-talla"] option:nth-child(5):checked) .summary-size-sudadera::after { content: "XL"; }
+body:has(select[name="sudadera-nube-color"] option:nth-child(2):checked) .summary-color-sudadera::after { content: "Gris"; }
+body:has(select[name="sudadera-nube-color"] option:nth-child(3):checked) .summary-color-sudadera::after { content: "Beige"; }
+body:has(select[name="sudadera-nube-color"] option:nth-child(4):checked) .summary-color-sudadera::after { content: "Verde"; }
+body:has(select[name="tenis-ruta-talla"] option:nth-child(2):checked) .summary-size-tenis::after { content: "23"; }
+body:has(select[name="tenis-ruta-talla"] option:nth-child(3):checked) .summary-size-tenis::after { content: "24"; }
+body:has(select[name="tenis-ruta-talla"] option:nth-child(4):checked) .summary-size-tenis::after { content: "25"; }
+body:has(select[name="tenis-ruta-talla"] option:nth-child(5):checked) .summary-size-tenis::after { content: "26"; }
+body:has(select[name="tenis-ruta-color"] option:nth-child(2):checked) .summary-color-tenis::after { content: "Naranja"; }
+body:has(select[name="tenis-ruta-color"] option:nth-child(3):checked) .summary-color-tenis::after { content: "Blanco"; }
+body:has(select[name="tenis-ruta-color"] option:nth-child(4):checked) .summary-color-tenis::after { content: "Azul"; }
+body:has(select[name="blusa-lino-talla"] option:nth-child(2):checked) .summary-size-blusa-lino::after { content: "XS"; }
+body:has(select[name="blusa-lino-talla"] option:nth-child(3):checked) .summary-size-blusa-lino::after { content: "S"; }
+body:has(select[name="blusa-lino-talla"] option:nth-child(4):checked) .summary-size-blusa-lino::after { content: "M"; }
+body:has(select[name="blusa-lino-talla"] option:nth-child(5):checked) .summary-size-blusa-lino::after { content: "L"; }
+body:has(select[name="blusa-lino-color"] option:nth-child(2):checked) .summary-color-blusa-lino::after { content: "Blanco"; }
+body:has(select[name="blusa-lino-color"] option:nth-child(3):checked) .summary-color-blusa-lino::after { content: "Beige"; }
+body:has(select[name="blusa-lino-color"] option:nth-child(4):checked) .summary-color-blusa-lino::after { content: "Rosa claro"; }
+body:has(select[name="blusa-oliva-talla"] option:nth-child(2):checked) .summary-size-blusa-oliva::after { content: "S"; }
+body:has(select[name="blusa-oliva-talla"] option:nth-child(3):checked) .summary-size-blusa-oliva::after { content: "M"; }
+body:has(select[name="blusa-oliva-talla"] option:nth-child(4):checked) .summary-size-blusa-oliva::after { content: "L"; }
+body:has(select[name="blusa-oliva-talla"] option:nth-child(5):checked) .summary-size-blusa-oliva::after { content: "XL"; }
+body:has(select[name="blusa-oliva-color"] option:nth-child(2):checked) .summary-color-blusa-oliva::after { content: "Oliva"; }
+body:has(select[name="blusa-oliva-color"] option:nth-child(3):checked) .summary-color-blusa-oliva::after { content: "Crema"; }
+body:has(select[name="blusa-oliva-color"] option:nth-child(4):checked) .summary-color-blusa-oliva::after { content: "Negro"; }
+body:has(select[name="jeans-wide-leg-talla"] option:nth-child(2):checked) .summary-size-jeans-wide::after { content: "26"; }
+body:has(select[name="jeans-wide-leg-talla"] option:nth-child(3):checked) .summary-size-jeans-wide::after { content: "28"; }
+body:has(select[name="jeans-wide-leg-talla"] option:nth-child(4):checked) .summary-size-jeans-wide::after { content: "30"; }
+body:has(select[name="jeans-wide-leg-talla"] option:nth-child(5):checked) .summary-size-jeans-wide::after { content: "32"; }
+body:has(select[name="jeans-wide-leg-color"] option:nth-child(2):checked) .summary-color-jeans-wide::after { content: "Azul claro"; }
+body:has(select[name="jeans-wide-leg-color"] option:nth-child(3):checked) .summary-color-jeans-wide::after { content: "Azul oscuro"; }
+body:has(select[name="jeans-wide-leg-color"] option:nth-child(4):checked) .summary-color-jeans-wide::after { content: "Negro"; }
+body:has(select[name="falda-denim-talla"] option:nth-child(2):checked) .summary-size-falda-denim::after { content: "XS"; }
+body:has(select[name="falda-denim-talla"] option:nth-child(3):checked) .summary-size-falda-denim::after { content: "S"; }
+body:has(select[name="falda-denim-talla"] option:nth-child(4):checked) .summary-size-falda-denim::after { content: "M"; }
+body:has(select[name="falda-denim-talla"] option:nth-child(5):checked) .summary-size-falda-denim::after { content: "L"; }
+body:has(select[name="falda-denim-color"] option:nth-child(2):checked) .summary-color-falda-denim::after { content: "Azul medio"; }
+body:has(select[name="falda-denim-color"] option:nth-child(3):checked) .summary-color-falda-denim::after { content: "Azul oscuro"; }
+body:has(select[name="falda-denim-color"] option:nth-child(4):checked) .summary-color-falda-denim::after { content: "Negro"; }
+body:has(select[name="puffer-urbano-talla"] option:nth-child(2):checked) .summary-size-abrigo-puffer::after { content: "S"; }
+body:has(select[name="puffer-urbano-talla"] option:nth-child(3):checked) .summary-size-abrigo-puffer::after { content: "M"; }
+body:has(select[name="puffer-urbano-talla"] option:nth-child(4):checked) .summary-size-abrigo-puffer::after { content: "L"; }
+body:has(select[name="puffer-urbano-talla"] option:nth-child(5):checked) .summary-size-abrigo-puffer::after { content: "XL"; }
+body:has(select[name="puffer-urbano-color"] option:nth-child(2):checked) .summary-color-abrigo-puffer::after { content: "Negro"; }
+body:has(select[name="puffer-urbano-color"] option:nth-child(3):checked) .summary-color-abrigo-puffer::after { content: "Beige"; }
+body:has(select[name="puffer-urbano-color"] option:nth-child(4):checked) .summary-color-abrigo-puffer::after { content: "Verde"; }
+body:has(select[name="vestido-midi-talla"] option:nth-child(2):checked) .summary-size-vestido-midi::after { content: "XS"; }
+body:has(select[name="vestido-midi-talla"] option:nth-child(3):checked) .summary-size-vestido-midi::after { content: "S"; }
+body:has(select[name="vestido-midi-talla"] option:nth-child(4):checked) .summary-size-vestido-midi::after { content: "M"; }
+body:has(select[name="vestido-midi-talla"] option:nth-child(5):checked) .summary-size-vestido-midi::after { content: "L"; }
+body:has(select[name="vestido-midi-color"] option:nth-child(2):checked) .summary-color-vestido-midi::after { content: "Verde"; }
+body:has(select[name="vestido-midi-color"] option:nth-child(3):checked) .summary-color-vestido-midi::after { content: "Azul"; }
+body:has(select[name="vestido-midi-color"] option:nth-child(4):checked) .summary-color-vestido-midi::after { content: "Negro"; }
+body:has(select[name="vestido-noche-talla"] option:nth-child(2):checked) .summary-size-vestido-noche::after { content: "XS"; }
+body:has(select[name="vestido-noche-talla"] option:nth-child(3):checked) .summary-size-vestido-noche::after { content: "S"; }
+body:has(select[name="vestido-noche-talla"] option:nth-child(4):checked) .summary-size-vestido-noche::after { content: "M"; }
+body:has(select[name="vestido-noche-talla"] option:nth-child(5):checked) .summary-size-vestido-noche::after { content: "L"; }
+body:has(select[name="vestido-noche-color"] option:nth-child(2):checked) .summary-color-vestido-noche::after { content: "Negro"; }
+body:has(select[name="vestido-noche-color"] option:nth-child(3):checked) .summary-color-vestido-noche::after { content: "Vino"; }
+body:has(select[name="vestido-noche-color"] option:nth-child(4):checked) .summary-color-vestido-noche::after { content: "Azul marino"; }
+body:has(select[name="bolso-mini-talla"] option:nth-child(2):checked) .summary-size-bolso-mini::after { content: "Única"; }
+body:has(select[name="bolso-mini-color"] option:nth-child(2):checked) .summary-color-bolso-mini::after { content: "Negro"; }
+body:has(select[name="bolso-mini-color"] option:nth-child(3):checked) .summary-color-bolso-mini::after { content: "Beige"; }
+body:has(select[name="bolso-mini-color"] option:nth-child(4):checked) .summary-color-bolso-mini::after { content: "Café"; }
+body:has(select[name="gafas-sol-talla"] option:nth-child(2):checked) .summary-size-gafas-sol::after { content: "Única"; }
+body:has(select[name="gafas-sol-color"] option:nth-child(2):checked) .summary-color-gafas-sol::after { content: "Negro"; }
+body:has(select[name="gafas-sol-color"] option:nth-child(3):checked) .summary-color-gafas-sol::after { content: "Café"; }
+body:has(select[name="gafas-sol-color"] option:nth-child(4):checked) .summary-color-gafas-sol::after { content: "Carey"; }
+
+body:has(select[name="sudadera-nube-color"] option:nth-child(4):checked) .summary-discount-sudadera { display: inline; }
+body:has(select[name="sudadera-nube-color"] option:nth-child(4):checked) .summary-discount-sudadera::after { content: "Promo color Verde: -$35 MXN"; }
+body:has(select[name="tenis-ruta-talla"] option:nth-child(5):checked) .summary-discount-tenis { display: inline; }
+body:has(select[name="tenis-ruta-talla"] option:nth-child(5):checked) .summary-discount-tenis::after { content: "Promo talla 26: -$50 MXN"; }
+body:has(select[name="jeans-wide-leg-color"] option:nth-child(4):checked) .summary-discount-jeans-wide { display: inline; }
+body:has(select[name="jeans-wide-leg-color"] option:nth-child(4):checked) .summary-discount-jeans-wide::after { content: "Promo color Negro: -$40 MXN"; }
+body:has(select[name="puffer-urbano-talla"] option:nth-child(5):checked) .summary-discount-abrigo-puffer { display: inline; }
+body:has(select[name="puffer-urbano-talla"] option:nth-child(5):checked) .summary-discount-abrigo-puffer::after { content: "Promo talla XL: -$60 MXN"; }
+body:has(select[name="vestido-noche-color"] option:nth-child(3):checked) .summary-discount-vestido-noche { display: inline; }
+body:has(select[name="vestido-noche-color"] option:nth-child(3):checked) .summary-discount-vestido-noche::after { content: "Promo color Vino: -$80 MXN"; }
+body:has(select[name="bolso-mini-color"] option:nth-child(4):checked) .summary-discount-bolso-mini { display: inline; }
+body:has(select[name="bolso-mini-color"] option:nth-child(4):checked) .summary-discount-bolso-mini::after { content: "Promo color Café: -$35 MXN"; }
 
 .summary-footnote {
   margin: 1rem 0 0;
@@ -1151,15 +1580,8 @@ textarea {
 
   .order-section .section-heading .eyebrow,
   .order-section .section-heading h2,
-  .order-section .section-heading p:not(.eyebrow),
-  .order-benefits {
+  .order-section .section-heading p:not(.eyebrow) {
     grid-column: 1;
-  }
-
-  .order-benefits {
-    grid-row: auto;
-    justify-content: flex-start;
-    margin-top: 0.85rem;
   }
 
   .summary {
@@ -1282,7 +1704,8 @@ textarea {
   .benefits ul,
   .product-grid,
   .form-grid,
-  .choice-grid {
+  .choice-grid,
+  .product-choice {
     grid-template-columns: 1fr;
   }
 
